@@ -12,9 +12,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/topaz/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_topaz
+# Inherit Cherish stuffs
+
+CHERISH_BUILD_TYPE := Unofficial
+WITH_GMS := true
+# Cherish props
+CHERISH_MAINTAINER := skwel
+CHERISH_CHIPSET := SM6225
+CHERISH_BATTERY := 5000mAh
+CHERISH_DISPLAY := 1080x2400
+
+PRODUCT_NAME := cherish_topaz
 PRODUCT_DEVICE := topaz
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
